@@ -159,11 +159,14 @@ export default function DiaryPage() {
                   {entry.tags && entry.tags.length > 0 && (
                     <span className="badge text-xs">{entry.tags[0]}</span>
                   )}
+                  <Link href={`/diary/${entry.id}`} className="btn btn-outline btn-xs">
+                    Edit
+                  </Link>
                   <button
                     onClick={() => setDeleteId(entry.id)}
-                    className="btn btn-ghost btn-xs btn-circle"
+                    className="btn btn-outline btn-xs btn-error"
                   >
-                    ✕
+                    Delete
                   </button>
                 </div>
               </div>

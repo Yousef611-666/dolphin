@@ -77,12 +77,17 @@ export default function ProjectsPage() {
                   <Link href={`/projects/${project.id}`} className="btn btn-ghost btn-sm">
                     View
                   </Link>
-                  <button
-                    onClick={() => setDeleteId(project.id)}
-                    className="btn btn-ghost btn-sm btn-error"
-                  >
-                    Delete
-                  </button>
+                  <div className="flex gap-2">
+                    <Link href={`/projects/${project.id}`} className="btn btn-outline btn-sm">
+                      Edit
+                    </Link>
+                    <button
+                      onClick={() => setDeleteId(project.id)}
+                      className="btn btn-outline btn-sm btn-error"
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -97,11 +97,14 @@ export default function ApplicationsPage() {
                     }`}>
                       {story.status}
                     </span>
+                    <Link href={`/applications/${story.id}`} className="btn btn-outline btn-xs">
+                      Edit
+                    </Link>
                     <button
                       onClick={() => setDeleteId(story.id)}
-                      className="btn btn-ghost btn-xs btn-circle"
+                      className="btn btn-outline btn-xs btn-error"
                     >
-                      ✕
+                      Delete
                     </button>
                   </div>
                 </div>
